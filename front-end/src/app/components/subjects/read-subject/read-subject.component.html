@@ -1,0 +1,32 @@
+<button
+  mat-raised-button
+  color="primary"
+  id="newSubjectButton"
+  (click)="navigateToCreate()"
+>
+  Nova Disciplina
+</button>
+
+<div class="container">
+  <mat-card class="subject-card" *ngFor="let subject of subjects">
+    <mat-card-header>
+      <mat-card-title>{{ subject.name }}</mat-card-title>
+    </mat-card-header>
+    <img
+      mat-card-image
+      [attr.src]="pictures + subject.imageFile"
+      alt="Photo of a Shiba Inu"
+    />
+    <mat-card-content>
+      <p>Descrição da Disciplina</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="navigateToUpdate()">
+        UPDATE
+      </button>
+      <button mat-raised-button color="warn" (click)="navigateToDelete()">
+        DELETE
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

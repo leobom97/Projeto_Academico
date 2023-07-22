@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>Nova Disciplina</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome" name="name" /> </mat-form-field
+    ><br />
+  </form>
+
+  <button mat-raised-button color="primary">Salvar</button>
+
+  <button mat-raised-button (click)="cancelarRegistro()" color="warn">
+    Cancelar
+  </button>
+</mat-card>

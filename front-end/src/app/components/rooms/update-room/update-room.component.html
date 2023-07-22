@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-card-title>Alterar Produto</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Nome"
+        [(ngModel)]="room.name"
+        name="name"
+      /> </mat-form-field
+    ><br />
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="description"
+        [(ngModel)]="room.description"
+        name="description"
+      />
+    </mat-form-field>
+  </form>
+
+  <button mat-raised-button (click)="updateRoom()" color="accent">
+    Atualizar</button
+  >&nbsp;
+
+  <button mat-raised-button (click)="cancelUpdate()" color="warn">
+    Cancelar
+  </button>
+</mat-card>

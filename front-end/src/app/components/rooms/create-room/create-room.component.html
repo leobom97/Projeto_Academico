@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-card-title>New Room</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="name"
+        [(ngModel)]="room.name"
+        name="name"
+      /> </mat-form-field
+    ><br />
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="description(optional)"
+        [(ngModel)]="room.description"
+        name="description"
+      />
+    </mat-form-field>
+  </form>
+
+  <button mat-raised-button color="primary" (click)="createNewRoom()">
+    Save
+  </button>
+
+  <button mat-raised-button (click)="cancelRegistration()" color="warn">
+    Cancel
+  </button>
+</mat-card>
